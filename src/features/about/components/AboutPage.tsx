@@ -63,13 +63,11 @@ export default function AboutPage({ language, about }: AboutPageProps) {
 
   return (
     <main className="aboutPage">
-      <section className="aboutIntro">
-        <div>
-          <h1>{about?.name ?? t.name}</h1>
-          <p>{about?.role ?? t.role}</p>
-         <p>{t.intro}</p>
-        </div>
-      </section>
+<section className="aboutIntro">
+  <div>
+    <h1>{about?.name ?? t.name}</h1>
+  </div>
+</section>
 
       <section className="aboutSection">
         <h2>{t.profileHeading}</h2>
