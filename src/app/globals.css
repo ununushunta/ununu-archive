@@ -504,9 +504,22 @@ button {
   }
 
   .aboutIntro {
-    grid-template-columns: 78px minmax(0, 1fr);
-    gap: 18px;
-  }
+  display: block;
+}
+
+.aboutPhoto {
+  margin: 0 auto 28px;
+  width: 88px;
+  height: 88px;
+}
+
+.aboutIntro h1 {
+  margin-bottom: 14px;
+}
+
+.aboutIntro p {
+  max-width: 100%;
+}
 
   .aboutIntro h1 {
     font-size: 19px;
