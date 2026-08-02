@@ -1213,12 +1213,39 @@ button {
   width: 100%;
 }
 
-.mobileProjectBody .worksPostContent,
-.mobileProjectBody .worksProjectInfo {
-  width: 100%;
-  max-width: 100%;
-}
+@media (max-width: 760px) {
+  .mobileProjectBody,
+  .mobileProjectBody .worksDetail,
+  .mobileProjectBody .worksHero,
+  .mobileProjectBody .worksProjectInfo,
+  .mobileProjectBody .worksPostContent,
+  .mobileProjectBody .worksGallery,
+  .mobileProjectBody .worksProjectMeta {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
 
-.mobileProjectBody .worksGallery {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  .mobileProjectBody {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    padding-bottom: 30px;
+  }
+
+  .mobileProjectBody .worksDetail,
+  .mobileProjectBody .worksHero,
+  .mobileProjectBody .worksProjectInfo,
+  .mobileProjectBody .worksPostContent,
+  .mobileProjectBody .worksProjectMeta {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .mobileProjectBody .worksGallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
