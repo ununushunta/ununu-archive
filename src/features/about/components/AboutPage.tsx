@@ -67,21 +67,21 @@ export default function AboutPage({ language, about }: AboutPageProps) {
         <div>
           <h1>{about?.name ?? t.name}</h1>
           <p>{about?.role ?? t.role}</p>
-          <p>{language === "en" ? about?.profileEn ?? t.intro : about?.profileJa ?? t.intro}</p>
+         <p>{t.intro}</p>
         </div>
-      </section>
-
-      <section className="aboutSection">
-        <h2>{t.capabilitiesHeading}</h2>
-        {capabilities.map((capability) => (
-          <p key={capability}>{capability}</p>
-        ))}
       </section>
 
       <section className="aboutSection">
         <h2>{t.profileHeading}</h2>
         {profileText ? <p>{profileText}</p> : null}
         {experienceText ? <p>{experienceText}</p> : null}
+      </section>
+
+            <section className="aboutSection">
+        <h2>{t.capabilitiesHeading}</h2>
+        {capabilities.map((capability) => (
+          <p key={capability}>{capability}</p>
+        ))}
       </section>
 
       <section className="aboutSection">
