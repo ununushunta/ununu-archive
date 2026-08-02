@@ -10,12 +10,23 @@ export const PROJECTS_QUERY = defineQuery(`
     order,
     brand,
     category,
-    year,
-    overview,
-    story,
+categoryJa,
+year,
+
+overview,
+overviewJa,
+
+story,
+storyJa,
+
 roles,
+rolesJa,
+
 achievements,
-    tags,
+achievementsJa,
+
+tags,
+tagsJa,
     heroImage,
     logo,
     gallery,

@@ -21,12 +21,18 @@ export type SanityProjectRecord = {
   order?: number;
   brand?: string;
   category?: string;
+  categoryJa?: string;
   year?: string;
   overview?: string;
+  overviewJa?: string;
 story?: PortableTextBlock[];
+storyJa?: PortableTextBlock[];
 roles?: string[];
+rolesJa?: string[];
 achievements?: string[];
+achievementsJa?: string[];
   tags?: string[];
+  tagsJa?: string[];
   heroImage?: SanityImage | null;
   logo?: SanityImage | null;
   gallery?: SanityImage[];

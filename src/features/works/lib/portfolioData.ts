@@ -13,19 +13,38 @@ function toProject(record: SanityProjectRecord): Project {
   const slug = record.slug?.current ?? "";
   const heroImageUrl = urlFor(record.heroImage);
 
-  return {
-    id: slug,
-    order: record.order ?? 0,
-    title: record.title ?? "",
-    titleJa: record.titleJa ?? "",
-    brand: record.brand ?? "",
-    category: record.category ?? "",
-    year: record.year ?? "",
-    overview: record.overview ?? "",
-    story: record.story ?? [],
-roles: record.roles ?? [],
-achievements: record.achievements ?? [],
-    tags: record.tags ?? [],
+return {
+  id: slug,
+  order: record.order ?? 0,
+
+  title: record.title ?? "",
+  titleJa: record.titleJa ?? "",
+
+  brand: record.brand ?? "",
+
+  category: record.category ?? "",
+  categoryJa: record.categoryJa ?? "",
+
+  year: record.year ?? "",
+
+  overview: record.overview ?? "",
+  overviewEn: record.overview ?? "",
+  overviewJa: record.overviewJa ?? "",
+
+  story: record.story ?? [],
+  storyEn: record.story ?? [],
+  storyJa: record.storyJa ?? [],
+
+  roles: record.roles ?? [],
+  rolesEn: record.roles ?? [],
+  rolesJa: record.rolesJa ?? [],
+
+  achievements: record.achievements ?? [],
+  achievementsEn: record.achievements ?? [],
+  achievementsJa: record.achievementsJa ?? [],
+
+  tags: record.tags ?? [],
+  tagsJa: record.tagsJa ?? [],
     heroImage: heroImageUrl ? `url(${heroImageUrl})` : fallbackHero,
     logo: urlFor(record.logo) ?? "",
     gallery: (record.gallery ?? [])

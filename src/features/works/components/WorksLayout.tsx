@@ -10,9 +10,13 @@ import type { Project } from "@/features/works/projects";
 
 type WorksLayoutProps = {
   projects: Project[];
+  language: "en" | "jp";
 };
 
-export default function WorksLayout({ projects }: WorksLayoutProps) {
+export default function WorksLayout({
+  projects,
+  language,
+}: WorksLayoutProps) {
   const [selectedProjectId, setSelectedProjectId] = useState(projects[0]?.id ?? "");
   const [mobileOpenProjectId, setMobileOpenProjectId] = useState<string | null>(projects[0]?.id ?? null);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
@@ -30,11 +34,11 @@ export default function WorksLayout({ projects }: WorksLayoutProps) {
 const renderProjectDetail = (project: (typeof projects)[number]) => (
   <div className="worksDetail">
     <Hero project={project} />
-    <ProjectInfo project={project} />
+    <ProjectInfo project={project} language={language} />
 
     <div className="worksPostContent">
       <Gallery project={project} />
-      <ProjectMeta project={project} />
+      <ProjectMeta project={project} language={language} />
     </div>
   </div>
 );

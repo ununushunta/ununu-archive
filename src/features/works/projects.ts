@@ -8,23 +8,36 @@ export type Project = {
 
   brand: string;
   category: string;
+  categoryJa?: string;
   year: string;
 
+  // 既存フィールド：移行中のフォールバックとして残す
   overview: string;
+  story: PortableTextBlock[];
+  roles: string[];
+  achievements: string[];
 
-story: PortableTextBlock[];
-roles: string[];
-achievements: string[];
+  // EN / JP用フィールド
+  overviewEn?: string;
+  overviewJa?: string;
+
+  storyEn?: PortableTextBlock[];
+  storyJa?: PortableTextBlock[];
+
+  rolesEn?: string[];
+  rolesJa?: string[];
+
+  achievementsEn?: string[];
+  achievementsJa?: string[];
 
   tags: string[];
+  tagsJa?: string[];
 
   heroImage: string;
   logo: string;
-
   gallery: string[];
 
   youtubeUrl?: string;
-
   featured?: boolean;
 };
 

@@ -39,7 +39,10 @@ export default function PortfolioClient({ initialProjects, initialAbout }: Portf
       {currentPage === "about" ? (
         <AboutPage language={language} about={initialAbout} />
       ) : (
-        <WorksLayout projects={initialProjects} />
+        <WorksLayout
+  projects={initialProjects}
+  language={language}
+/>
       )}
     </>
   );
