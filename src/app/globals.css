@@ -466,10 +466,10 @@ button {
     color: var(--text);
   }
 
-  .mobileProjectBody {
-    padding: 0 0 30px;
-    animation: contentEnter 200ms ease both;
-  }
+.mobileProjectBody {
+  padding: 0 0 30px;
+  animation: contentEnter 200ms ease both;
+}
 
   .mobileProjectBody .worksDetail {
     width: 100%;
