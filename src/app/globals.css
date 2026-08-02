@@ -1249,3 +1249,79 @@ button {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+@media (max-width: 760px) {
+  .worksLayout {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: none !important;
+  }
+
+  .worksSidebar,
+  .worksMain {
+    display: none !important;
+  }
+
+  .mobileProjectList {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 18px 16px 46px;
+  }
+
+  .mobileProjectRow {
+    display: block !important;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .mobileProjectTrigger {
+    width: 100%;
+  }
+
+  .mobileProjectBody {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    overflow: visible !important;
+  }
+
+  .mobileProjectBody .worksDetail,
+  .mobileProjectBody .worksHero,
+  .mobileProjectBody .worksProjectInfo,
+  .mobileProjectBody .worksPostContent,
+  .mobileProjectBody .worksProjectMeta {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .mobileProjectBody .worksGallery {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .worksSidebar {
+    display: none !important;
+  }
+
+  .worksMain {
+    display: none !important;
+  }
+
+  .worksLayout {
+    display: block !important;
+    grid-template-columns: none !important;
+  }
+
+  .mobileProjectList {
+    display: block !important;
+    width: 100% !important;
+  }
+}
