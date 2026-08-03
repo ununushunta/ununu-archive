@@ -831,6 +831,12 @@ button {
   line-height: 1.95;
 }
 
+.worksStory p {
+  color: #dadada;
+  font-size: 15px;
+  line-height: 1.95;
+}
+
 .worksTags {
   display: flex;
   flex-wrap: wrap;
@@ -888,6 +894,12 @@ button {
   letter-spacing: 0.12em;
   text-decoration: none;
   border-bottom: 1px solid #232323;
+}
+
+.worksStory p {
+  margin: 0 0 1.4em;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 @keyframes worksFadeIn {
