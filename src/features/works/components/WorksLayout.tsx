@@ -18,7 +18,7 @@ export default function WorksLayout({
   language,
 }: WorksLayoutProps) {
   const [selectedProjectId, setSelectedProjectId] = useState(projects[0]?.id ?? "");
-  const [mobileOpenProjectId, setMobileOpenProjectId] = useState<string | null>(projects[0]?.id ?? null);
+  const [mobileOpenProjectId, setMobileOpenProjectId] = useState<string | null>(null);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
 
   const selectedProject = useMemo(
@@ -37,7 +37,7 @@ const renderProjectDetail = (project: (typeof projects)[number]) => (
     <ProjectInfo project={project} language={language} />
 
     <div className="worksPostContent">
-      <Gallery project={project} />
+      <Gallery project={project} language={language} />
       <ProjectMeta project={project} language={language} />
     </div>
   </div>

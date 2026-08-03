@@ -3,9 +3,13 @@ import type { Project } from "@/features/works/projects";
 
 type GalleryProps = {
   project: Project;
+  language: "en" | "jp";
 };
 
-export default function Gallery({ project }: GalleryProps) {
+export default function Gallery({
+  project,
+  language,
+}: GalleryProps) {
   const gallery = (project.gallery ?? []).filter(Boolean);
 
   if (gallery.length === 0) {
@@ -14,7 +18,9 @@ export default function Gallery({ project }: GalleryProps) {
 
 return (
   <section className="worksGallerySection">
-    <h2 className="worksArchiveSectionTitle">Gallery</h2>
+    <h2 className="worksArchiveSectionTitle">
+  {language === "jp" ? "ギャラリー" : "Gallery"}
+</h2>
 
     <div className="worksGallery" aria-label={`${project.title} gallery`}>
       {gallery.map((item, index) => {
