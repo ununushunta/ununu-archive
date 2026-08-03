@@ -831,12 +831,6 @@ button {
   line-height: 1.95;
 }
 
-.worksStory p {
-  color: #dadada;
-  font-size: 15px;
-  line-height: 1.95;
-}
-
 .worksTags {
   display: flex;
   flex-wrap: wrap;
@@ -896,12 +890,6 @@ button {
   border-bottom: 1px solid #232323;
 }
 
-.worksStory p {
-  margin: 0 0 1.4em;
-  font-size: inherit;
-  line-height: inherit;
-}
-
 @keyframes worksFadeIn {
   from {
     opacity: 0;
@@ -915,11 +903,11 @@ button {
   max-width: 760px;
 }
 
-.worksStory p {
-  margin: 0 0 18px;
-  font-size: 16px;
-  line-height: 1.9;
-  color: rgba(255, 255, 255, 0.82);
+.worksStory h2 {
+  margin: 48px 0 18px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
 }
 
 .worksStory h2 {
@@ -927,6 +915,57 @@ button {
   font-size: 24px;
   font-weight: 500;
   line-height: 1.4;
+}
+
+.worksStory h3 {
+  margin: 36px 0 14px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.worksStory p {
+  color: #dadada;
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+.worksStory ul,
+.worksStory ol {
+  margin: 18px 0 24px 22px;
+  padding: 0;
+}
+
+.worksStory li {
+  margin-bottom: 8px;
+  color: #dadada;
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+.worksStory blockquote {
+  margin: 30px 0;
+  padding-left: 18px;
+  border-left: 2px solid #3a3a3a;
+  color: #bfbfbf;
+  font-style: italic;
+}
+
+.worksStory a {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.worksStory figure {
+  margin: 36px 0;
+}
+
+.worksStory figcaption {
+  margin-top: 10px;
+  color: #8c8c8c;
+  font-size: 12px;
+  text-align: center;
 }
 
 .worksStory h3 {
