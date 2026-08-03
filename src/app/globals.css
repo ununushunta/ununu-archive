@@ -491,9 +491,10 @@ button {
     font-size: 24px;
   }
 
-  .mobileProjectBody .worksOverview {
-    font-size: 14px;
-  }
+.mobileProjectBody .worksOverview,
+.mobileProjectBody .worksStory p {
+  font-size: 14px;
+}
 
   .makingGrid {
     grid-template-columns: 1fr 1fr;
