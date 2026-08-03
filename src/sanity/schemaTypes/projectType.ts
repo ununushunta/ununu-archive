@@ -280,12 +280,12 @@ defineField({
   description: "実績や成果を英語で追加できます。",
 }),
 defineField({
-  name: "achievements",
-  title: "Achievements (EN)",
+  name: "achievementsJa",
+  title: "Achievements (JP)",
   type: "array",
   group: "content",
   of: [{ type: "string" }],
-  description: "実績や成果を英語で追加できます。",
+  description: "実績や成果を日本語で追加できます。",
 }),
         defineField({
             name: "youtubeUrl",
