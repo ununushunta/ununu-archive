@@ -47,6 +47,7 @@ const renderProjectDetail = (project: (typeof projects)[number]) => (
     <div className={`worksLayout ${isSidebarCollapsed ? "sidebarCollapsed" : ""}`}>
       <Sidebar
         projects={projects}
+        language={language}
         selectedProjectId={selectedProject?.id ?? selectedProjectId}
         onSelect={handleProjectSelect}
         isCollapsed={isSidebarCollapsed}
@@ -69,7 +70,11 @@ const renderProjectDetail = (project: (typeof projects)[number]) => (
                 onClick={() => handleProjectSelect(project.id)}
               >
                 <span className="worksSidebarIndex">{String(project.order).padStart(3, "0")}</span>
-                <span className="worksSidebarTitle">{project.title}</span>
+                <span className="worksSidebarTitle">
+  {language === "jp"
+    ? project.titleJa?.trim() || project.title
+    : project.title}
+</span>
                 <span>{isOpen ? "−" : "+"}</span>
               </button>
 
