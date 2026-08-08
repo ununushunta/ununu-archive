@@ -172,6 +172,24 @@ defineField({
         },
       ],
     },
+    {
+  name: "youtube",
+  title: "YouTube",
+  type: "object",
+  fields: [
+    {
+      name: "url",
+      title: "YouTube URL",
+      type: "url",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "caption",
+      title: "Caption",
+      type: "string",
+    },
+  ],
+},
   ],
 }),
 defineField({
@@ -239,6 +257,24 @@ defineField({
         },
       ],
     },
+    {
+  name: "youtube",
+  title: "YouTube",
+  type: "object",
+  fields: [
+    {
+      name: "url",
+      title: "YouTube URL",
+      type: "url",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "caption",
+      title: "Caption",
+      type: "string",
+    },
+  ],
+},
   ],
 }),
         defineField({
