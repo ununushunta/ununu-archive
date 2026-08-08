@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AboutPage from "@/features/about/components/AboutPage";
 import Header from "@/features/shared/header/Header";
 import WorksLayout from "@/features/works/components/WorksLayout";
@@ -23,9 +23,22 @@ type PortfolioClientProps = {
   } | null;
 };
 
-export default function PortfolioClient({ initialProjects, initialAbout }: PortfolioClientProps) {
+export default function PortfolioClient({
+  initialProjects,
+  initialAbout,
+}: PortfolioClientProps) {
   const [currentPage, setCurrentPage] = useState<"works" | "about">("works");
   const [language, setLanguage] = useState<"en" | "jp">("en");
+
+  useEffect(() => {
+    const browserLanguages = navigator.languages ?? [navigator.language];
+
+    const prefersJapanese = browserLanguages.some((browserLanguage) =>
+      browserLanguage.toLowerCase().startsWith("ja"),
+    );
+
+    setLanguage(prefersJapanese ? "jp" : "en");
+  }, []);
 
   return (
     <>
@@ -33,16 +46,21 @@ export default function PortfolioClient({ initialProjects, initialAbout }: Portf
         currentPage={currentPage}
         language={language}
         onPageChange={setCurrentPage}
-        onLanguageToggle={() => setLanguage((current) => (current === "en" ? "jp" : "en"))}
+        onLanguageToggle={() =>
+          setLanguage((current) => (current === "en" ? "jp" : "en"))
+        }
       />
 
       {currentPage === "about" ? (
-        <AboutPage language={language} about={initialAbout} />
+        <AboutPage
+          language={language}
+          about={initialAbout}
+        />
       ) : (
         <WorksLayout
-  projects={initialProjects}
-  language={language}
-/>
+          projects={initialProjects}
+          language={language}
+        />
       )}
     </>
   );
